@@ -1,0 +1,118 @@
+html {
+  height: auto;
+}
+
+body {
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+}
+#map_canvas {
+    height:400px;
+    width:440px;
+}
+#new_map_header {
+    height:20px;
+    width:100%;
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    border-bottom:2px solid #666;
+}
+@media print {
+  #map_canvas {
+    height: 950px;
+  }
+
+}
+.container {
+    width: 900px;
+}
+.left {
+    float:left;
+}
+.right {
+    float:right;
+}
+#new_map_details {
+    display: block;
+    background-color: #f2f2f2;
+    width:450px;
+}
+
+.welcome_box {
+    padding:4px;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size:16px;
+    color: #FFF;
+    border:3px solid #f2f2f2;
+    background-color: #333;
+}
+
+ul#points {
+    margin: 0;
+    list-style-type: none;
+    padding-left:0px;
+}
+ul#points li > .description {
+    font-size: 16px;
+    margin-left: 5px;
+    width: 85%;
+    cursor: pointer;
+}
+ul#points li {
+    padding:5px;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+ul#points li > a {
+    color: #333;
+}
+
+ul#points li > a:hover {
+    color: #FFF;
+}
+
+ul#points li > .marker_icon {
+    vertical-align: bottom;
+    cursor: pointer;
+}
+ul#points li > .remove_marker
+{
+    font-size: 22px;
+    text-decoration: none;
+}
+
+input#map_name, input#map_description {
+    font-size:20px;
+    width: 98%;
+}
+
+form#new_map {
+    padding:5px;
+}
+
+.highlighted_li {
+    background-color: #3090c7;
+}
+
+#points_scroller {
+    border-bottom-color: #333333;
+     border-bottom-style: solid;
+     border-bottom-width: 1px;
+     max-height: 400px;
+     margin-bottom: 0.5em;
+     margin-top: 0.5em;
+     overflow-y: auto;
+     width: 99%;
+}
+
+#new_map_details input[type="submit"] {
+    font-size:16px;
+}
+
+#new_map_details input[type="submit"]:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @map.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @map.description %>
+</p>
+<p>Points</p>
+<ul>
+ <% @map.points.each do |point| %>
+ <li><%= point.inspect %></li>
+  <% end %>
+</ul>
+<%= link_to 'Edit', edit_map_path(@map) %> |
+<%= link_to 'Back', maps_path %>
