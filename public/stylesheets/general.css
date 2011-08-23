@@ -1,0 +1,53 @@
+body {
+	background-color: #808F5D;
+}
+.welcome_box {
+    padding:4px;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size:16px;
+    color: #FFF;
+	margin-top:0.2em;
+	display: inline-block;
+}
+
+.welcome_box a {
+	color: #333;
+}
+
+.background_grey {
+	background-color: #302F30;
+    border:3px solid #576157;
+}
+
+.background_orange {
+    background-color: #C2B93E;
+    border:3px solid #FFAA00;
+	color: #333;
+}
+.italics {
+	font-style: italic;
+}
+.center {
+	text-align: center;
+}
+
+table.themed th {
+	text-align: left;
+}
+
+.themed_entry {
+	padding:5px;
+	border:4px solid #302F30;
+	background-color: #576157;
+	margin-top:0.5em;
+	display: inline-block;
+}
+
+.themed_entry a {
+	color: #FFF;
+}
+
+#content {
+	padding:5px;
+}

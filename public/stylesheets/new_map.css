@@ -41,16 +41,6 @@ body {
     width:450px;
 }
 
-.welcome_box {
-    padding:4px;
-    font-family: Verdana;
-    font-weight: bold;
-    font-size:16px;
-    color: #FFF;
-    border:3px solid #f2f2f2;
-    background-color: #333;
-}
-
 ul#points {
     margin: 0;
     list-style-type: none;

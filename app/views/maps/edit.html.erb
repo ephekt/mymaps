@@ -5,7 +5,37 @@
 </script>
 <div class="container">
   <div id="new_map_details" class="left">
-    <%= render 'form' %>
+	<%= javascript_include_tag 'map' %>
+	<%= form_for(@map) do |f| %>
+	  <% if @map.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@map.errors.count, "error") %> prohibited this map from being saved:</h2>
+
+	      <ul>
+	      <% @map.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	  <div class="field">
+	    <%= f.label :name %>
+	    <br />
+	    <%= f.text_field :name %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :description %>
+	    <br /><%= f.text_field :description %>
+	  </div>
+	  <div id="points_scroller">
+	      <ul id="points">
+	      </ul>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit 'Save' %> or <%= link_to 'Cancel', maps_path %>
+	  </div>
+	<% end %>
   </div>
   <div class="map_points right">
     Go to a location: <input id="address" type="textbox" value="Sunnyvale, CA"> <input type="button" value="Geocode" onclick="codeAddress()">

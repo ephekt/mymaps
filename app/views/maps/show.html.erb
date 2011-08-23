@@ -15,5 +15,6 @@
  <li><%= point.inspect %></li>
   <% end %>
 </ul>
-<%= link_to 'Edit', edit_map_path(@map) %> |
-<%= link_to 'Back', maps_path %>
+<%= link_to 'Edit', edit_map_path(@map) %> 
+| <%= link_to 'Delete', @map, :confirm => 'Are you sure?', :method => :delete %> 
+| <%= link_to 'Back', maps_path %>
