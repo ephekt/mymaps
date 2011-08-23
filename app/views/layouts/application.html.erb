@@ -7,19 +7,6 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-	<div id="messages">
-		<span class="welcome_box background_grey">
-			social mapper is totally uhhhhhh google map sub-feature no one uses.
-		</span>
-		<br />
-		<span class="welcome_box background_orange italics">
-			i've got no more secrets. get on with it.
-		</span>
-		<br />
-		<span class="welcome_box background_orange italics">
-			yeaaaahh <%= link_to 'create a new map', new_map_path %>
-		</span>
-	</div>
 	<div id="content"><%= yield %></div>
 	
 	<span class="tiny_goodbye_box italics">
