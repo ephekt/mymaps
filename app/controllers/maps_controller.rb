@@ -14,6 +14,7 @@ class MapsController < ApplicationController
   # GET /maps/1.xml
   def show
     @map = Map.find_by_id(params[:id])
+    @saved_locations = @map.points.for_editing.to_json
 
     respond_to do |format|
       format.html # show.html.erb

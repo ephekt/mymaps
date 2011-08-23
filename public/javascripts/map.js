@@ -138,8 +138,18 @@ function create_marker(map, point, text_description) {
     'lat':point.lat(),
     'lng':point.lng()
   }
-  var input_points = "<input type='text' name='markers["+marker_identifier+"][description]' class='description' value='"+location_hash['description']+"'></input><input type='hidden' name='markers["+marker_identifier+"][lat]' value='"+location_hash['lat']+"'/><input type='hidden' name='markers["+marker_identifier+"][lng]' value='"+location_hash['lng']+"'/>";
-  $('#points').append("<li id='point_"+marker_identifier+"'><img class='marker_icon' src='"+marker_icon+"' />"+input_points+" <a href='#' onclick=\"remove_marker(\'"+marker_identifier+"\'); return false;\" class='remove_marker'>x</a></li>");
+	if("undefined" != typeof(view_only)) {
+		$('#points').append("<li id='point_"+marker_identifier+"'><img class='marker_icon' src='"+marker_icon+"' />"
+		+
+		"<input type='text' name='markers["+marker_identifier+"][description]' class='description' value='"+location_hash['description']+"'></input><input type='hidden' name='markers["+marker_identifier+"][lat]' value='"+location_hash['lat']+"'/><input type='hidden' name='markers["+marker_identifier+"][lng]' value='"+location_hash['lng']+"'/>"
+		+" </li>");		
+	} else
+	{
+  		$('#points').append("<li id='point_"+marker_identifier+"'><img class='marker_icon' src='"+marker_icon+"' />"
+		+
+		"<input type='text' name='markers["+marker_identifier+"][description]' class='description' value='"+location_hash['description']+"'></input><input type='hidden' name='markers["+marker_identifier+"][lat]' value='"+location_hash['lat']+"'/><input type='hidden' name='markers["+marker_identifier+"][lng]' value='"+location_hash['lng']+"'/>"
+		+" <a href='#' onclick=\"remove_marker(\'"+marker_identifier+"\'); return false;\" class='remove_marker'>x</a></li>");
+	}
   
   $('body').data(marker_identifier,location_hash);
 }

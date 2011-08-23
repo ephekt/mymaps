@@ -1,23 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div id="messages">
+	<span class="welcome_box background_grey">
+		this is a super special map...
+	</span>
+	<br />
+	<span class="welcome_box background_orange italics">
+		titled, <%= @map.name %>
+	</span>
+	<br />
+	<span class="welcome_box background_orange italics">
+		and described, <%= @map.description %>
+	</span>
+	<br />
+	<span class="welcome_box background_grey">
+		oh, and when you're done you can <%= link_to 'go back to all the maps', maps_path %>
+	</span>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @map.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @map.description %>
-</p>
-<p>Points</p>
-<ul>
- <% @map.points.each do |point| %>
- <li><%= point.inspect %></li>
-  <% end %>
-</ul>
-
-<b>Yeah, I get it. This is really ugly. I'll get around to making this prettier. Thanks for the concern.</b>
-
-<%= link_to 'Edit', edit_map_path(@map) %> 
-| <%= link_to 'Delete', @map, :confirm => 'Are you sure?', :method => :delete %> 
-| <%= link_to 'Back', maps_path %>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"> </script>
+<script type="text/javascript" >
+  var data_set = <%= raw @saved_locations %>;
+	var view_only = true;
+</script>
+<div class="container">
+  <div id="new_map_details" class="left">
+	<%= javascript_include_tag 'map' %>
+	<span class='give_me_spce'>points on the map...</span>
+	  <div id="points_scroller">
+	      <ul id="points">
+	      </ul>
+	  </div>
+  </div>
+  <div class="map_points right">
+    <div id="map_canvas"></div>
+  </div>
+</div>
+<div style="clear:both"></div>
