@@ -51,3 +51,8 @@ table.themed th {
 #content {
 	padding:5px;
 }
+
+.tiny_goodbye_box {
+	font-size:0.25em;
+	color: #333;
+}
