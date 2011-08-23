@@ -56,3 +56,7 @@ table.themed th {
 	font-size:0.25em;
 	color: #333;
 }
+
+#messages {
+	margin-bottom:0.25em;
+}
