@@ -1,0 +1,5 @@
+A rails 3.0.5 application using the Google Maps API to allow you to create & save maps with points of interest on them
+
+* TO DO 
+** Make maps revisioned so people can modify them and not destroy the original
+** Maybe add some accounts? Meh. Le Tired.
